@@ -1,0 +1,58 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    /* Preloader Container */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #fff;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    /* Spinner */
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 8px solid #e0e0e0;
+      border-top: 8px solid #0d6efd;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Percentage Text */
+    .percentage {
+      font-size: 24px;
+      font-family: 'Segoe UI', sans-serif;
+      color: #0d6efd;
+      font-weight: 600;
+    }
+
+    .brand {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: 600;
+      color: #0d6efd;
+      font-family: 'Segoe UI', sans-serif;
+      letter-spacing: 1px;
+    }
