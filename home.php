@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME</title>
     <!-- Favicon link -->
-    <link rel="icon" type="image/png" sizes="32x32" href="IMAGES/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="IMAGES/icon.png">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="BOOTSTRAP/css/bootstrap.min.css">
     <link rel="stylesheet" href="CSS/home.css">

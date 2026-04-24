@@ -9,16 +9,17 @@ ini_set('display_errors', 0);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABOUT ME</title>
     <!-- Favicon link -->
-    <link rel="icon" type="image/png" sizes="32x32" href="IMAGES/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="IMAGES/icon.png">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="BOOTSTRAP/css/bootstrap.min.css" />
     <link rel="stylesheet" href="CSS/about.css" />
     <script src="https://kit.fontawesome.com/0ed688cb3d.js" crossorigin="anonymous"></script>
 </head>
 <style>
-.about{
-    z-index:0;
-}
+    .about {
+        z-index: 0;
+    }
+
     /* About Section */
     .about-section {
         padding: 100px 8%;
@@ -296,77 +297,77 @@ ini_set('display_errors', 0);
     <?php
     include('inc/footer.php');
     ?>
-    
-     <!-- Particle JS -->
-<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-<script>
-    tsParticles.load("particles-bg", {
-        fpsLimit: 60,
-        background: {
-            color: "transparent"
-        },
-        particles: {
-            number: {
-                value: 60,
-                density: {
+
+    <!-- Particle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+    <script>
+        tsParticles.load("particles-bg", {
+            fpsLimit: 60,
+            background: {
+                color: "transparent"
+            },
+            particles: {
+                number: {
+                    value: 60,
+                    density: {
+                        enable: true,
+                        area: 800
+                    }
+                },
+                color: {
+                    value: "#0a6efd"
+                },
+                shape: {
+                    type: "circle"
+                },
+                opacity: {
+                    value: 0.3,
+                    random: true
+                },
+                size: {
+                    value: {
+                        min: 2,
+                        max: 6
+                    },
+                    random: true
+                },
+                move: {
                     enable: true,
-                    area: 800
+                    speed: 1.5,
+                    direction: "none",
+                    outModes: "out"
+                },
+                links: {
+                    enable: true,
+                    distance: 120,
+                    color: "#0a6efd",
+                    opacity: 0.2,
+                    width: 1
                 }
             },
-            color: {
-                value: "#0a6efd"
-            },
-            shape: {
-                type: "circle"
-            },
-            opacity: {
-                value: 0.3,
-                random: true
-            },
-            size: {
-                value: {
-                    min: 2,
-                    max: 6
+            interactivity: {
+                events: {
+                    onHover: {
+                        enable: true,
+                        mode: "repulse"
+                    },
+                    onClick: {
+                        enable: true,
+                        mode: "push"
+                    }
                 },
-                random: true
-            },
-            move: {
-                enable: true,
-                speed: 1.5,
-                direction: "none",
-                outModes: "out"
-            },
-            links: {
-                enable: true,
-                distance: 120,
-                color: "#0a6efd",
-                opacity: 0.2,
-                width: 1
-            }
-        },
-        interactivity: {
-            events: {
-                onHover: {
-                    enable: true,
-                    mode: "repulse"
-                },
-                onClick: {
-                    enable: true,
-                    mode: "push"
+                modes: {
+                    repulse: {
+                        distance: 120
+                    },
+                    push: {
+                        quantity: 4
+                    }
                 }
             },
-            modes: {
-                repulse: {
-                    distance: 120
-                },
-                push: {
-                    quantity: 4
-                }
-            }
-        },
-        detectRetina: true
-    });
-</script>
+            detectRetina: true
+        });
+    </script>
 
     <script src="JS/about.js"></script>
     <script src="BOOTSTRAP/js/bootstrap.min.js"></script>
