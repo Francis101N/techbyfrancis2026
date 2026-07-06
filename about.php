@@ -7,7 +7,7 @@ ini_set('display_errors', 0);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABOUT ME</title>
+    <title>ABOUT</title>
     <!-- Favicon link -->
     <link rel="icon" type="image/png" sizes="32x32" href="IMAGES/icon.png">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -111,7 +111,7 @@ ini_set('display_errors', 0);
 
 
     <main>
-        <h2>About Me</h2>
+        <h2>About TechByFrancis</h2>
     </main>
 
     <?php
@@ -124,128 +124,186 @@ ini_set('display_errors', 0);
         <section class="about-section">
             <div class="about-container">
 
-                <h2 class="about-title">Introducing Francis Nwankwo</h2>
+                <h2 class="about-title">About Me</h2>
 
                 <div class="about-content">
 
                     <!-- Left Image -->
                     <div class="about-image">
                         <img src="IMAGES/francis-left.jpeg"
-                            alt="Francis Nwankwo - Software Developer , penetration-tester and IT Consultant at TechbyFrancis Limited based in Lagos, Nigeria">
+                            alt="Francis Nwankwo - Software Developer and Founder of TechByFrancis">
                     </div>
 
                     <!-- Right Text -->
                     <div class="about-text">
+
                         <p>
-                            Francis Nwankwo is a versatile IT professional originally from
-                            <strong>Anambra State, Nigeria</strong>, currently based in
-                            <strong>Lagos, Nigeria</strong>. He holds a
-                            <strong>B.Sc. in Computer Science</strong> from
-                            <strong>Chukwuemeka Odumegwu Ojukwu University (COOU), Uli Campus</strong>.
+                            Hi, I’m <strong>Francis Nwankwo</strong>, a Technologist and the founder of
+                            <strong>TechByFrancis</strong>, a software studio focused on building secure,
+                            scalable, and high-performance digital solutions.
                         </p>
 
                         <p>
-                            With experience in full-stack web development, project management,
-                            cybersecurity, and IT consulting, he specializes in planning and executing
-                            software-driven solutions from building visually compelling, high-performing,
-                            and responsive web applications to ensuring data security and confidentiality
-                            at every stage.
+                            I specialize in full-stack web development, IT project management, and cybersecurity.
+                            My work focuses on designing and developing reliable systems that help businesses
+                            operate more efficiently, improve user experience, and maintain strong data security.
                         </p>
 
                         <p>
-                            Francis combines technical expertise with strategic thinking to deliver
-                            scalable systems and measurable business results.
+                            Over the years, I have worked on building responsive web applications, managing
+                            technical projects from concept to deployment, and implementing security-focused
+                            solutions that protect applications and data from vulnerabilities.
                         </p>
+
+                        <p>
+                            At TechByFrancis, the goal is simple to combine clean engineering with practical
+                            business thinking to deliver software that actually solves real-world problems.
+                        </p>
+
                     </div>
 
                 </div>
             </div>
         </section>
 
-
         <div class="journey container my-5">
-            <h2 class="text-center mb-4">My Journey</h2><br><br>
+
+            <h2 class="text-center mb-5">My Journey</h2>
 
             <div class="row justify-content-center">
                 <div class="col-12 col-md-10 col-lg-8">
+
+                    <!-- 2026 -->
+                    <div class="steps mb-4">
+
+                        <p><span class="year">2026</span></p>
+
+                        <div class="text">
+
+                            <h5>Full-Stack Web Developer & Digital Solutions Engineer</h5>
+
+                            <h6>Equal Logistics Limited (Managing Multiple Group Companies) – Lekki, Lagos State</h6>
+
+                            <p>
+                                Lead the design, development, maintenance, and optimization of enterprise web applications and digital platforms
+                                across the Equal Logistics Group, including <strong>ViscoSupport</strong>,
+                                <strong>Upstream Development Company</strong>, and other affiliated businesses.
+                                Responsible for full-stack web development, database design, cybersecurity implementation,
+                                SEO optimization, website performance, cloud deployment, content management,
+                                and ongoing technical support. Collaborate with management to deliver scalable digital
+                                solutions that enhance operational efficiency, strengthen brand visibility, and support
+                                business growth across multiple organizations.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- 2025 -->
                     <div class="steps mb-4">
                         <p><span class="year">2025</span></p>
                         <div class="text">
-                            <h5>Internship</h5>
-                            <h6>Aledoy Solutions, Okota Lagos State.</h6>
-                            <span>Gained hands-on experience in Back-End Web Development using Node.js, Express.js, and
-                                MongoDB, and performed Cybersecurity (Penetration Testing) exercises to identify and
-                                strengthen system vulnerabilities.</span>
-                        </div>
-                    </div>
-
-                    <div class="steps mb-4">
-                        <p><span class="year">2024</span></p>
-                        <div class="text">
-                            <h5>NYSC Internship</h5>
-                            <h6>W.Tech Software Development Ltd. Akure, Ondo State.</h6>
-                            <p> Collaborated with a dynamic development team to build and manage real-world software
-                                projects. I also shared my knowledge with beginners, guiding them through the
-                                fundamentals of modern software development and best practices.
+                            <h5>Software Engineering Internship</h5>
+                            <h6>Aledoy Solutions, Lagos State</h6>
+                            <p>
+                                Gained hands-on experience in backend development using Node.js, Express.js, and MongoDB.
+                                Worked on real-world systems and participated in security testing exercises to identify and
+                                fix application vulnerabilities.
                             </p>
                         </div>
                     </div>
 
+                    <!-- 2024 NYSC -->
                     <div class="steps mb-4">
                         <p><span class="year">2024</span></p>
                         <div class="text">
-                            <h5>Training & Certification</h5>
-                            <h6>International Institute of Project and Safety
-                                Management, Akure.</h6>
-                            <p>Successfully completed professional training and obtained an Associate in Project
-                                Management (APM) certification .</p>
+                            <h5>NYSC Software Developer</h5>
+                            <h6>W.Tech Software Development Ltd, Akure</h6>
+                            <p>
+                                Contributed to the development of real-world software applications while collaborating with
+                                a team of developers. Also supported junior developers by guiding them through modern
+                                development practices and workflows.
+                            </p>
                         </div>
                     </div>
 
+                    <!-- 2024 Certification -->
+                    <div class="steps mb-4">
+                        <p><span class="year">2024</span></p>
+                        <div class="text">
+                            <h5>Professional Certification</h5>
+                            <h6>International Institute of Project and Safety Management</h6>
+                            <p>
+                                Earned an Associate in Project Management (APM) certification, strengthening my ability to
+                                manage technical projects effectively from planning to execution.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- University -->
                     <div class="steps mb-4">
                         <p><span class="year">2023</span></p>
                         <div class="text">
-                            <h5>University</h5>
-                            <p><strong>B.Sc. Computer Science</strong>, Chukwuemeka Odumegwu Ojukwu University (COOU),
-                                Anambra State.</p>
-                        </div>
-                    </div>
-
-                    <div class="steps mb-4">
-                        <p><span class="year">2022</span></p>
-                        <div class="text">
-                            <h5>Internship & Certification</h5>
-                            <h6>Loctech IT Training Center, Port Harcourt.</h6>
-                            <p>Full Stack Web Development with PHP, Laravel & MYSQL.
+                            <h5>B.Sc. Computer Science</h5>
+                            <h6>Chukwuemeka Odumegwu Ojukwu University (COOU)</h6>
+                            <p>
+                                Completed a Bachelor’s degree in Computer Science with a strong foundation in software
+                                development, systems design, and computing principles.
                             </p>
                         </div>
                     </div>
 
+                    <!-- 2022 -->
                     <div class="steps mb-4">
-                        <p><span class="year">2018</span></p>
+                        <p><span class="year">2022</span></p>
                         <div class="text">
-                            <h5>High School / WASSCE</h5>
-                            <p>St. Michael Model Comprehensive Secondary School, Nimo, Anambra State.</p>
+                            <h5>Full-Stack Web Development Training</h5>
+                            <h6>Loctech IT Training Center, Port Harcourt</h6>
+                            <p>
+                                Trained in full-stack web development using PHP, Laravel, and MySQL, building foundational
+                                skills in backend logic and database-driven applications.
+                            </p>
                         </div>
                     </div>
 
+                    <!-- 2018 Secondary -->
                     <div class="steps mb-4">
                         <p><span class="year">2018</span></p>
                         <div class="text">
-                            <h5>Training & Certification</h5>
-                            <h6> Ciel Consulting, Port Harcourt.</h6>
-                            <p>Diploma in Computer (MS Word, Excel, PowerPoint, CorelDraw, Scanning, and Internet
-                                Awareness).</p>
+                            <h5>Secondary Education (WASSCE)</h5>
+                            <h6>St. Michael Model Comprehensive Secondary School, Nimo</h6>
+                            <p>
+                                Completed secondary education and obtained the West African Senior School Certificate
+                                Examination (WASSCE).
+                            </p>
                         </div>
                     </div>
 
+                    <!-- 2018 Computer Training -->
+                    <div class="steps mb-4">
+                        <p><span class="year">2018</span></p>
+                        <div class="text">
+                            <h5>Computer Literacy Certification</h5>
+                            <h6>Ciel Consulting, Port Harcourt</h6>
+                            <p>
+                                Completed foundational training in computer applications including Microsoft Office,
+                                CorelDraw, and basic digital tools.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 2012 -->
                     <div class="steps mb-4">
                         <p><span class="year">2012</span></p>
                         <div class="text">
-                            <h5>Primary School / First School Leaving Certificate.</h5>
-                            <p>State Primary School, Port Harcourt, Rivers State.</p>
+                            <h5>Primary Education</h5>
+                            <h6>State Primary School, Port Harcourt</h6>
+                            <p>
+                                Completed primary education and obtained First School Leaving Certificate.
+                            </p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>

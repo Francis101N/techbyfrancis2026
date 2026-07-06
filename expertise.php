@@ -61,100 +61,221 @@
 
 
     <section>
-        <img src="IMAGES/blue-dots.png" alt="" class="dots">
-        <h2 class="text-center">Building, Managing, Securing ...</h2>
-        <p class="text-center">With expertise in project management, full-stack development, and cybersecurity. I
-            design, create and manage secure systems that drive growth, efficiency, and lasting impact.</p>
+
+        <img src="IMAGES/blue-dots.png" alt="TechByFrancis Digital Solutions" class="dots">
+
+        <h2 class="text-center">
+            Building, Managing & Securing Modern Digital Solutions
+        </h2>
+
+        <p class="text-center container">
+            Through <strong>TechByFrancis</strong>, I help businesses and individuals build secure,
+            scalable, and high-performance digital solutions.  delivering technology that drives growth, efficiency, and long-term success.
+        </p>
+
         <div class="section">
 
+            <!-- IT PROJECT MANAGEMENT -->
             <div class="cont">
-                <i class="fa-solid fa-list-check fs-3" style="color: #1a4a78;"></i><br><br>
-                <h3>IT Project Management</h3>
-                <p>
-                    <b>Leading Projects from Strategy to Successful Delivery</b><br><br>
-                    I coordinate timelines, resources, and stakeholder goals to ensure efficient execution and delivery of
-                    high-quality digital solutions. Focused on clarity, structure, and results-driven outcomes.
-                </p>
-            </div>
 
-            <div class="cont">
-                <i class="fa-brands fa-html5 pe-2 fs-3" style="color: #1a4a78;"></i>
-                <i class="fa-brands fa-css3-alt pe-2 fs-3" style="color: #1a4a78;"></i>
-                <i class="fa-brands fa-bootstrap pe-2 fs-3" style="color: #1a4a78;"></i>
-                <i class="fa-brands fa-js pe-2 fs-3" style="color: #1a4a78;"></i>
-                <i class="fa-brands fa-react fs-3" style="color: #1a4a78;"></i>
-                <i class="fa-brands fa-php pe-2 fs-3" style="color: #1a4a78;"></i>
-                <i class="fa-brands fa-laravel pe-2 fs-3" style="color: #1a4a78;"></i>
-                <i class="fa-solid fa-database pe-2 fs-3" style="color: #1a4a78;"></i>
-                <i class="fa-brands fa-node-js pe-2 fs-3" style="color: #1a4a78;"></i>
-                <i class="fa-brands fa-envira pe-2 fs-3" style="color: #1a4a78;"></i>
+                <i class="fa-solid fa-list-check fs-3" style="color:#1a4a78;"></i>
+
                 <br><br>
 
-                <h3>Full Stack Web Development</h3>
-                <small class="text-danger">
-                    (PHP with MySQL & Node.js/Express with MongoDB)
-                </small><br><br>
+                <h4>IT Project Management</h4>
 
                 <p>
-                    <b>Building Scalable, Secure, and High-Performance Web Applications</b><br><br>
-                    I develop modern full-stack solutions with clean architecture, responsive interfaces, and robust backend
-                    systems designed for performance, scalability, and security.
+
+                    <strong>Turning Ideas into Successful Digital Projects</strong>
+
+                    <br><br>
+
+                    I manage technology projects from planning and requirements gathering through deployment and maintenance.
+                    By coordinating timelines, teams, stakeholders, and resources, I ensure projects are delivered
+                    efficiently, on schedule, and aligned with business objectives.
+
                 </p>
+
             </div>
 
+            <!-- FULL STACK DEVELOPMENT -->
             <div class="cont">
-                <i class="fa-solid fa-shield-halved fs-3 pe-2" style="color: #1a4a78;"></i>
-                <i class="fa-solid fa-user-shield fs-3" style="color: #1a4a78;"></i>
-                <br><br>
 
-                <h3>Cybersecurity (Penetration Testing)</h3>
                 <p>
-                    <b>Protecting Systems Through Secure Design and Risk Prevention</b><br><br>
-                    I implement secure coding practices, vulnerability mitigation strategies, and proactive defenses to ensure
-                    system integrity, data protection, and resilience against cyber threats.
+
+                    <i class="fa-brands fa-html5 pe-2 fs-3" style="color:#1a4a78;"></i>
+                    <i class="fa-brands fa-css3-alt pe-2 fs-3" style="color:#1a4a78;"></i>
+                    <i class="fa-brands fa-bootstrap pe-2 fs-3" style="color:#1a4a78;"></i>
+                    <i class="fa-brands fa-js pe-2 fs-3" style="color:#1a4a78;"></i>
+                    <i class="fa-brands fa-react pe-2 fs-3" style="color:#1a4a78;"></i>
+                    <i class="fa-brands fa-php pe-2 fs-3" style="color:#1a4a78;"></i>
+                    <i class="fa-brands fa-laravel pe-2 fs-3" style="color:#1a4a78;"></i>
+                    <i class="fa-solid fa-database pe-2 fs-3" style="color:#1a4a78;"></i>
+                    <i class="fa-brands fa-node-js pe-2 fs-3" style="color:#1a4a78;"></i>
+                    <i class="fa-brands fa-envira pe-2 fs-3" style="color:#1a4a78;"></i>
+
                 </p>
+
+
+                <h4>Full-Stack Software Development</h4>
+
+                <p>
+
+                    <strong>Building Secure, Scalable & High-Performance Applications</strong>
+
+                    <br><br>
+
+                    I design and develop responsive websites, enterprise web applications,
+                    REST APIs, business management systems, customer portals, and custom software
+                    using modern technologies. My focus is clean architecture, scalability,
+                    security, performance optimization, and exceptional user experience.
+
+                </p>
+
             </div>
 
-            <div class="cont">
-                <i class="fa-solid fa-chart-line fs-3 pe-2" style="color: #1a4a78;"></i>
-                <i class="fa-solid fa-gears fs-3" style="color: #1a4a78;"></i>
-                <br><br>
+            <!-- CYBER SECURITY -->
 
-                <h3>Business Systems</h3>
+            <div class="cont">
+
                 <p>
-                    <b>Designing Smart, Scalable, and Efficient Digital Operations</b><br><br>
-                    I build and optimize business systems that streamline workflows, improve efficiency, and support scalable
-                    growth through reliable digital infrastructure.
+
+                    <i class="fa-solid fa-shield-halved fs-3 pe-2" style="color:#1a4a78;"></i>
+
+                    <i class="fa-solid fa-user-shield fs-3 pe-2" style="color:#1a4a78;"></i>
+
+                    <i class="fa-solid fa-bug-slash fs-3" style="color:#1a4a78;"></i>
+
                 </p>
+
+
+                <h4>Cybersecurity & Penetration Testing</h4>
+
+                <p>
+
+                    <strong>Protecting Applications, Networks & Business Data</strong>
+
+                    <br><br>
+
+                    I strengthen applications and digital infrastructure through secure coding,
+                    vulnerability assessments, penetration testing, security hardening,
+                    authentication best practices, and proactive risk mitigation to help protect
+                    businesses against evolving cyber threats.
+
+                </p>
+
             </div>
 
-            <div class="cont">
-                <i class="fa-solid fa-magnifying-glass fs-3 pe-2" style="color: #1a4a78;"></i>
-                <i class="fa-solid fa-chart-line fs-3" style="color: #1a4a78;"></i>
-                <br><br>
+            <!-- BUSINESS SYSTEMS -->
 
-                <h3>Search Engine Optimization (SEO)</h3>
+            <div class="cont">
+
                 <p>
-                    <b>Improving Visibility, Ranking, and Organic Growth</b><br><br>
-                    I optimize websites for search engines through technical SEO, keyword strategy, and performance enhancements.
-                    Focused on increasing organic traffic, improving rankings, and ensuring strong digital visibility across search platforms.
+
+                    <i class="fa-solid fa-chart-line fs-3 pe-2" style="color:#1a4a78;"></i>
+
+                    <i class="fa-solid fa-gears fs-3" style="color:#1a4a78;"></i>
+
                 </p>
+
+                <h4>Business Systems & Digital Transformation</h4>
+
+                <p>
+
+                    <strong>Building Smarter Digital Workflows</strong>
+
+                    <br><br>
+
+                    I develop intelligent business systems including HR platforms,
+                    CRM solutions, inventory management systems, appointment booking platforms,
+                    client portals, and workflow automation that improve productivity,
+                    reduce manual processes, and support sustainable business growth.
+
+                </p>
+
             </div>
 
-            <div class="cont">
-                <i class="fa-brands fa-linux fs-3 pe-2" style="color: #1a4a78;"></i>
-                <i class="fa-solid fa-terminal fs-3" style="color: #1a4a78;"></i>
-                <br><br>
+            <!-- SEO -->
 
-                <h3>Linux Scripting & Automation</h3>
+            <div class="cont">
+
                 <p>
-                    <b>Automating Systems for Efficiency and Reliability</b><br><br>
-                    I develop shell scripts and automation workflows in Linux environments to streamline server operations,
-                    improve system efficiency, and reduce manual workload through reliable and scalable automation solutions.
+
+                    <i class="fa-solid fa-magnifying-glass fs-3 pe-2" style="color:#1a4a78;"></i>
+
+                    <i class="fa-solid fa-chart-line fs-3 pe-2" style="color:#1a4a78;"></i>
+
+                    <i class="fa-solid fa-ranking-star fs-3" style="color:#1a4a78;"></i>
+
                 </p>
+
+                <h4>Search Engine Optimization (SEO)</h4>
+
+                <p>
+
+                    <strong>Helping Your Business Get Found Online</strong>
+
+                    <br><br>
+
+                    I improve website visibility through Technical SEO, On-Page SEO,
+                    keyword optimization, structured data implementation, Core Web Vitals,
+                    content optimization, and performance improvements that increase
+                    search rankings, organic traffic, and online credibility.
+
+                </p>
+
+            </div>
+
+            <!-- LINUX -->
+
+            <div class="cont">
+
+                <p>
+
+                    <i class="fa-brands fa-linux fs-3 pe-2" style="color:#1a4a78;"></i>
+
+                    <i class="fa-solid fa-terminal fs-3 pe-2" style="color:#1a4a78;"></i>
+
+                    <i class="fa-solid fa-server fs-3" style="color:#1a4a78;"></i>
+
+                </p>
+
+                <h4>Linux Administration & Automation</h4>
+
+                <p>
+
+                    <strong>Optimizing Infrastructure Through Automation</strong>
+
+                    <br><br>
+
+                    I create Linux shell scripts, automate deployments,
+                    optimize server environments, and streamline repetitive tasks
+                    to improve reliability, efficiency, scalability, and operational performance.
+
+                </p>
+
             </div>
 
         </div>
+
+        <div class="text-center mt-5">
+
+            <h3>
+                Ready to Build Something Exceptional?
+            </h3>
+
+            <p class="container">
+                Whether you need a professional website,web-app, enterprise software,
+                a secure business system, technical SEO, or cybersecurity solutions,
+                TechByFrancis is ready to help transform your ideas into reliable digital products.
+            </p>
+
+            <a href="contact" class="btn btn-primary">
+                Let's Build Together
+            </a>
+
+        </div>
+
     </section>
 
     <!-- Back to Top Button -->

@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="IMAGES/portfolio logo black.png" alt="logo">
+                <img src="IMAGES/mylogo2.png" alt="logo" style="width: 220px; height: auto;">
             </a>
 
             <!-- Toggle button with "fries menu icon" -->
@@ -15,7 +15,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ps-5">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="home">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="about">About Me</a>

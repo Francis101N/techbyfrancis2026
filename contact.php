@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="BOOTSTRAP/css/bootstrap.min.css" />
     <link rel="stylesheet" href="CSS/contact.css" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="https://kit.fontawesome.com/0ed688cb3d.js" crossorigin="anonymous"></script>
     <script type="application/ld+json">
         {
@@ -126,6 +127,9 @@
                 </div>
 
                 <textarea name="message" id="message" placeholder="Message"></textarea><br><br>
+
+                <div class="g-recaptcha" data-sitekey="6Ldv_u4sAAAAADIcQm62A49alo6ezq8uejCJBTNX"></div>
+                <br>
 
                 <div class="d-grid gap-2 col-12 col-sm-8 col-md-6 mx-auto my-3">
                     <button type="submit" class="btn btn-primary shadow" id="submit"
