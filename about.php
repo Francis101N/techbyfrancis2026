@@ -5,15 +5,69 @@ ini_set('display_errors', 0);
 <html lang="en">
 
 <head>
+
+    <!-- Character Encoding -->
     <meta charset="UTF-8">
+
+    <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABOUT</title>
-    <!-- Favicon link -->
+
+    <!-- Primary SEO -->
+    <title>About Francis Nwankwo | Founder of TechByFrancis</title>
+
+    <meta name="description"
+        content="Learn more about Francis Nwankwo, the founder of TechByFrancis. A Full-Stack Developer, Cybersecurity Professional, and IT Project Manager dedicated to building secure, scalable, and innovative digital solutions for businesses worldwide.">
+
+    <meta name="author" content="Francis Nwankwo">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2563EB">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://techbyfrancis.com/about">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title"
+        content="About Francis Nwankwo | Founder of TechByFrancis">
+    <meta property="og:description"
+        content="Meet Francis Nwankwo, a Full-Stack Developer, Cybersecurity Professional, and IT Project Manager helping businesses build secure digital solutions.">
+    <meta property="og:image"
+        content="https://techbyfrancis.com/IMAGES/og-image.jpg">
+    <meta property="og:url"
+        content="https://techbyfrancis.com/about">
+    <meta property="og:site_name"
+        content="TechByFrancis">
+
+    <!-- Twitter -->
+    <meta name="twitter:card"
+        content="summary_large_image">
+    <meta name="twitter:title"
+        content="About Francis Nwankwo | TechByFrancis">
+    <meta name="twitter:description"
+        content="Full-Stack Developer • Cybersecurity Professional • IT Project Manager">
+    <meta name="twitter:image"
+        content="https://techbyfrancis.com/IMAGES/og-image.jpg">
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="IMAGES/icon.png">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="BOOTSTRAP/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="CSS/about.css" />
+    <link rel="apple-touch-icon" href="IMAGES/icon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="BOOTSTRAP/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/about.css">
+
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/0ed688cb3d.js" crossorigin="anonymous"></script>
+
 </head>
 <style>
     .about {

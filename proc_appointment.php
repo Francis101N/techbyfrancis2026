@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Validate required fields
     if (!$full_name || !$email || !$number || !$subject || !$date || !$time || !$message) {
-        echo "<script>alert('Please fill in all required fields.'); window.location='index';</script>";
+        echo "<script>alert('Please fill in all required fields.'); window.location='home';</script>";
         exit;
     }
 
@@ -61,9 +61,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $mail->SMTPAuth = true;
     $mail->Port = 465;
     $mail->SMTPSecure = 'ssl';
-    $mail->Username = 'portfolio@techbyfrancis.com';
-    $mail->Password = 'TECHbyfrancis101$$';
-    $mail->From = 'portfolio@techbyfrancis.com';
+    $mail->Username = 'admin@techbyfrancis.com';
+    $mail->Password = 'Francis1972##';
+    $mail->From = 'admin@techbyfrancis.com';
     $mail->FromName = 'TechByFrancis';
 
     // Send to admin
@@ -87,4 +87,3 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         echo "<script>alert('Sorry, something went wrong while sending emails. Please try again.'); window.history.back();</script>";
     }
 }
-?>

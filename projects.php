@@ -2,15 +2,70 @@
 <html lang="en">
 
 <head>
+
+    <!-- Character Encoding -->
     <meta charset="UTF-8">
+
+    <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MY PROJECTS</title>
-    <!-- Favicon link -->
+
+    <!-- Primary SEO -->
+    <title>Projects | TechByFrancis Portfolio</title>
+
+    <meta name="description"
+        content="Explore the portfolio of TechByFrancis featuring Full-Stack Web Development, Custom Software Development, Cybersecurity, SEO, and IT Project Management projects delivered for businesses and organizations.">
+
+    <meta name="author" content="Francis Nwankwo">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2563EB">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://techbyfrancis.com/projects">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title"
+        content="Projects | TechByFrancis Portfolio">
+    <meta property="og:description"
+        content="Browse a collection of web development, cybersecurity, software engineering, and digital transformation projects completed by TechByFrancis.">
+    <meta property="og:image"
+        content="https://techbyfrancis.com/IMAGES/og-image.jpg">
+    <meta property="og:url"
+        content="https://techbyfrancis.com/projects">
+    <meta property="og:site_name"
+        content="TechByFrancis">
+
+    <!-- Twitter -->
+    <meta name="twitter:card"
+        content="summary_large_image">
+    <meta name="twitter:title"
+        content="Projects | TechByFrancis Portfolio">
+    <meta name="twitter:description"
+        content="Discover innovative software, web development, cybersecurity, and IT projects by TechByFrancis.">
+    <meta name="twitter:image"
+        content="https://techbyfrancis.com/IMAGES/og-image.jpg">
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="IMAGES/icon.png">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="BOOTSTRAP/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="CSS/projects.css" />
+    <link rel="apple-touch-icon" href="IMAGES/icon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="BOOTSTRAP/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/projects.css">
+
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/0ed688cb3d.js" crossorigin="anonymous"></script>
+
+    <!-- Structured Data -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -19,27 +74,33 @@
                     "name": "Francis Nwankwo",
                     "url": "https://techbyfrancis.com/",
                     "image": "https://techbyfrancis.com/IMAGES/francis_selfie.png",
-                    "jobTitle": "IT Project Manager, Full Stack Developer, Cybersecurity (penetration tester)",
+                    "jobTitle": "Full-Stack Developer, Cybersecurity Professional & IT Project Manager",
+                    "worksFor": {
+                        "@type": "Organization",
+                        "name": "TechByFrancis"
+                    },
                     "sameAs": [
                         "https://www.linkedin.com/in/francis-nwankwo-661595218",
+                        "https://github.com/Francis101N",
                         "https://x.com/francis65176212",
                         "https://www.instagram.com/francis_officiallll"
                     ]
                 },
                 {
                     "@type": "Organization",
-                    "name": "TechbyFrancis",
-                    "url": "https://techbyfrancis.com",
-                    "logo": "https://techbyfrancis.com/IMAGES/mylogo.png",
-                    "sameAs": [
-                        "https://www.linkedin.com/in/francis-nwankwo-661595218",
-                        "https://x.com/francis65176212",
-                        "https://www.instagram.com/francis_officiallll"
-                    ],
+                    "name": "TechByFrancis",
+                    "url": "https://techbyfrancis.com/",
+                    "logo": "https://techbyfrancis.com/IMAGES/mylogo2.png",
                     "founder": {
                         "@type": "Person",
                         "name": "Francis Nwankwo"
                     }
+                },
+                {
+                    "@type": "CollectionPage",
+                    "name": "TechByFrancis Projects",
+                    "url": "https://techbyfrancis.com/projects",
+                    "description": "A portfolio showcasing web development, custom software, cybersecurity, SEO, and IT project management work delivered by TechByFrancis."
                 }
             ]
         }
@@ -108,6 +169,116 @@
             <article class="col-md-6 col-lg-4">
                 <div class="rounded-4 overflow-hidden h-100">
 
+                    <!-- CAROUSEL 3 -->
+                    <div id="carousel3" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="IMAGES/mms1.png" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="IMAGES/mms2.png" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="IMAGES/mms3.png" class="d-block w-100">
+                            </div>
+                        </div>
+
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon bg-dark rounded-circle p-2"></span>
+                        </button>
+
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel3" data-bs-slide="next">
+                            <span class="carousel-control-next-icon bg-dark rounded-circle p-2"></span>
+                        </button>
+
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title">MEDICALS MANAGEMENT SYSTEM (MMS)</h5>
+
+                        <p class="text-muted small">
+                            A high-performance, multi-branch operations management ecosystem built for hospitals, clinics, enterprise companies and pharmaceuticals, featuring real-time inventory synchronization, instant stock row-locking, prescription tracking, medical records, medications dispensing and centralized staffs and patients reporting.
+                        </p>
+
+                        <!-- <p>Tech Stack:
+                            <span class="badge bg-danger fw-bold me-2">HTML5</span>
+                            <span class="badge bg-danger fw-bold me-2">BOOTSTRAP</span>
+                            <span class="badge bg-danger fw-bold me-2">JavaScript</span>
+                            <span class="badge bg-danger fw-bold me-2">PHP</span>
+                            <span class="badge bg-danger fw-bold me-2">LARAVEL</span>
+                            <span class="badge bg-danger fw-bold me-2">MYSQL</span>
+                            <span class="badge bg-danger fw-bold me-2">GIT</span>
+                            <span class="badge bg-danger fw-bold me-2">GITHUB</span>
+                        </p> -->
+
+                        <br>
+                        <a href="https://mms.techbyfrancis.com/" class="learn-more" target="_blank" rel="noopener">
+                            View Live <img src="IMAGES/blue arrow.png" alt="arrow icon" style="height: 20px;" class="ps-2">
+                        </a>
+                    </div>
+
+                </div>
+            </article>
+
+            <article class="col-md-6 col-lg-4">
+                <div class="rounded-4 overflow-hidden h-100">
+
+                    <!-- CAROUSEL 0 -->
+                    <div id="carousel0" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="IMAGES/Screenshot 2026-07-22 at 8.32.18 AM.png" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="IMAGES/Screenshot 2026-07-22 at 8.33.10 AM.png" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="IMAGES/Screenshot 2026-07-22 at 8.33.41 AM.png" class="d-block w-100">
+                            </div>
+                        </div>
+
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel0" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon bg-dark rounded-circle p-2"></span>
+                        </button>
+
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel0" data-bs-slide="next">
+                            <span class="carousel-control-next-icon bg-dark rounded-circle p-2"></span>
+                        </button>
+
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title">DIGITAL GATE PASS MANAGEMENT SYSTEM</h5>
+
+                        <p class="text-muted small">
+                            Developed a secure, full-stack digital marketplace featuring a high-end, dark-themed glassmorphism UI designed to automate global and regional digital asset delivery. Built a dual-currency payment pipeline separating a Global Software Marketplace (USD via PayPal) for high-ticket systems from a Regional Book Storefront (NGN via Paystack) supporting local cards, bank transfers, and USSD. The entire platform is controlled by a comprehensive Admin Dashboard that manages user access, product catalogs, live transactions, and automated file fulfillment.
+                        </p>
+
+                        <!-- <p>Tech Stack:
+                            <span class="badge bg-danger fw-bold me-2">HTML5</span>
+                            <span class="badge bg-danger fw-bold me-2">BOOTSTRAP</span>
+                            <span class="badge bg-danger fw-bold me-2">JavaScript</span>
+                            <span class="badge bg-danger fw-bold me-2">PHP</span>
+                            <span class="badge bg-danger fw-bold me-2">LARAVEL</span>
+                            <span class="badge bg-danger fw-bold me-2">MYSQL</span>
+                            <span class="badge bg-danger fw-bold me-2">GIT</span>
+                            <span class="badge bg-danger fw-bold me-2">GITHUB</span>
+                        </p> -->
+
+                        <br>
+                        <a href="https://techbyfrancis.com/gate-pass/" class="learn-more" target="_blank" rel="noopener">
+                            View Live <img src="IMAGES/blue arrow.png" alt="arrow icon" style="height: 20px;" class="ps-2">
+                        </a>
+                    </div>
+
+                </div>
+            </article>
+
+            <article class="col-md-6 col-lg-4">
+                <div class="rounded-4 overflow-hidden h-100">
+
                     <!-- CAROUSEL 1 -->
                     <div id="carousel1" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
                         <div class="carousel-inner">
@@ -165,7 +336,7 @@
                 <div class="rounded-4 overflow-hidden h-100">
 
                     <!-- CAROUSEL -->
-                    <div id="carousel3" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
+                    <div id="carousel2" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
 
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -178,11 +349,11 @@
                         </div>
 
                         <!-- Controls -->
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon bg-dark rounded-circle p-2"></span>
                         </button>
 
-                        <button class="carousel-control-next" type="button" data-bs-target="#carousel3" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
                             <span class="carousel-control-next-icon bg-dark rounded-circle p-2"></span>
                         </button>
 
@@ -257,22 +428,22 @@
                 <div class="rounded-4 overflow-hidden h-100">
 
                     <!-- CAROUSEL 1 -->
-                    <div id="carousel1" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
+                    <div id="carousel3" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
 
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src="IMAGES/bbr-home.png" class="d-block w-100">
                             </div>
                             <div class="carousel-item">
-                                <img src="images/bbr-admin.png" class="d-block w-100">
+                                <img src="IMAGES/bbr-admin.png" class="d-block w-100">
                             </div>
                         </div>
 
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon bg-dark rounded-circle p-2"></span>
                         </button>
 
-                        <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel3" data-bs-slide="next">
                             <span class="carousel-control-next-icon bg-dark rounded-circle p-2"></span>
                         </button>
 
@@ -309,7 +480,7 @@
             <!-- FRANCIS BLOG -->
             <article class="col-12 col-md-6 col-lg-4 p-3">
 
-                <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div id="myCarousel4" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <!-- First Image -->
                         <div class="carousel-item active">
@@ -323,12 +494,12 @@
                     </div>
 
                     <!-- Controls -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel"
+                    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel4"
                         data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel"
+                    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel4"
                         data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
@@ -540,6 +711,7 @@
             <img src="IMAGES/blue-dots.png" alt="Decorative blue dots">
         </div>
     </article>
+
 
     <!-- Back to Top Button -->
     <button id="backToTop" type="button" aria-label="Back to top" title="Back to top">

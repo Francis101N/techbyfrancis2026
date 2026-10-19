@@ -1,173 +1,218 @@
 <?php
-// Database connection
-$host = 'localhost';
-$db   = 'techbyfr_portfolio';
-$user = 'techbyfr_portfolio';
-$pass = 'TECHBYfrancis$$';
+// $host = 'localhost';
+// $db   = 'techbyfr_portfolio';
+// $user = 'techbyfr_portfolio';
+// $pass = 'TECHBYfrancis$$';
 
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("DB Connection failed: " . $e->getMessage());
-}
+// try {
+//     $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
+//     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+// } catch (PDOException $e) {
+//     die("DB Connection failed: " . $e->getMessage());
+// }
 
-// Generate AES token
-function generateAESToken($data)
-{
-    $secret_key = "my_secret_key_123456";
-    $secret_iv  = "my_secret_iv_123456";
+// function generateAESToken($data)
+// {
+//     $secret_key = "my_secret_key_123456";
+//     $secret_iv  = "my_secret_iv_123456";
 
-    $key = hash('sha256', $secret_key);
-    $iv  = substr(hash('sha256', $secret_iv), 0, 16);
+//     $key = hash('sha256', $secret_key);
+//     $iv  = substr(hash('sha256', $secret_iv), 0, 16);
 
-    return base64_encode(openssl_encrypt($data, "AES-256-CBC", $key, 0, $iv));
-}
+//     return base64_encode(openssl_encrypt($data, "AES-256-CBC", $key, 0, $iv));
+// }
 
-// Get IP address
-function getUserIP()
-{
-    if (!empty($_SERVER['HTTP_CLIENT_IP'])) return $_SERVER['HTTP_CLIENT_IP'];
-    if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) return explode(',', $_SERVER['HTTP_X_FORWARDED_FOR'])[0];
-    return $_SERVER['REMOTE_ADDR'];
-}
+// function getUserIP()
+// {
+//     if (!empty($_SERVER['HTTP_CLIENT_IP'])) return $_SERVER['HTTP_CLIENT_IP'];
+//     if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) return explode(',', $_SERVER['HTTP_X_FORWARDED_FOR'])[0];
+//     return $_SERVER['REMOTE_ADDR'];
+// }
 
-// Get Operating System
-function getUserOS()
-{
-    $userAgent = $_SERVER['HTTP_USER_AGENT'];
-    $osArray = [
-        '/windows nt 10/i'     => 'Windows 10',
-        '/windows nt 6.3/i'    => 'Windows 8.1',
-        '/windows nt 6.2/i'    => 'Windows 8',
-        '/windows nt 6.1/i'    => 'Windows 7',
-        '/macintosh|mac os x/i' => 'Mac OS X',
-        '/linux/i'             => 'Linux',
-        '/iphone/i'            => 'iPhone',
-        '/android/i'           => 'Android',
-        '/ipad/i'              => 'iPad'
-    ];
-    foreach ($osArray as $regex => $value) {
-        if (preg_match($regex, $userAgent)) return $value;
-    }
-    return "Unknown OS";
-}
+// function getUserOS()
+// {
+//     $userAgent = $_SERVER['HTTP_USER_AGENT'];
+//     $osArray = [
+//         '/windows nt 10/i'     => 'Windows 10',
+//         '/windows nt 6.3/i'    => 'Windows 8.1',
+//         '/windows nt 6.2/i'    => 'Windows 8',
+//         '/windows nt 6.1/i'    => 'Windows 7',
+//         '/macintosh|mac os x/i' => 'Mac OS X',
+//         '/linux/i'             => 'Linux',
+//         '/iphone/i'            => 'iPhone',
+//         '/android/i'           => 'Android',
+//         '/ipad/i'              => 'iPad'
+//     ];
+//     foreach ($osArray as $regex => $value) {
+//         if (preg_match($regex, $userAgent)) return $value;
+//     }
+//     return "Unknown OS";
+// }
 
-// Get Browser
-function getUserBrowser()
-{
-    $userAgent = $_SERVER['HTTP_USER_AGENT'];
-    $browsers = [
-        '/msie/i'       => 'Internet Explorer',
-        '/firefox/i'    => 'Firefox',
-        '/chrome/i'     => 'Chrome',
-        '/safari/i'     => 'Safari',
-        '/edge/i'       => 'Edge',
-        '/opera/i'      => 'Opera',
-        '/mobile/i'     => 'Mobile Browser'
-    ];
-    foreach ($browsers as $regex => $value) {
-        if (preg_match($regex, $userAgent)) return $value;
-    }
-    return "Unknown Browser";
-}
+// function getUserBrowser()
+// {
+//     $userAgent = $_SERVER['HTTP_USER_AGENT'];
+//     $browsers = [
+//         '/msie/i'       => 'Internet Explorer',
+//         '/firefox/i'    => 'Firefox',
+//         '/chrome/i'     => 'Chrome',
+//         '/safari/i'     => 'Safari',
+//         '/edge/i'       => 'Edge',
+//         '/opera/i'      => 'Opera',
+//         '/mobile/i'     => 'Mobile Browser'
+//     ];
+//     foreach ($browsers as $regex => $value) {
+//         if (preg_match($regex, $userAgent)) return $value;
+//     }
+//     return "Unknown Browser";
+// }
+// function getLocationData($ip)
+// {
+//     $url = "http://ip-api.com/json/{$ip}?fields=status,country,regionName,city,query";
+//     $response = @file_get_contents($url);
+//     if ($response) {
+//         $data = json_decode($response, true);
+//         if ($data['status'] === 'success') {
+//             return [
+//                 'ip'      => $data['query'],
+//                 'country' => $data['country'],
+//                 'region'  => $data['regionName'],
+//                 'city'    => $data['city']
+//             ];
+//         }
+//     }
+//     return [
+//         'ip'      => $ip,
+//         'country' => 'Unknown',
+//         'region'  => 'Unknown',
+//         'city'    => 'Unknown'
+//     ];
+// }
 
-// Get Location using ip-api
-function getLocationData($ip)
-{
-    $url = "http://ip-api.com/json/{$ip}?fields=status,country,regionName,city,query";
-    $response = @file_get_contents($url);
-    if ($response) {
-        $data = json_decode($response, true);
-        if ($data['status'] === 'success') {
-            return [
-                'ip'      => $data['query'],
-                'country' => $data['country'],
-                'region'  => $data['regionName'],
-                'city'    => $data['city']
-            ];
-        }
-    }
-    return [
-        'ip'      => $ip,
-        'country' => 'Unknown',
-        'region'  => 'Unknown',
-        'city'    => 'Unknown'
-    ];
-}
+// $ip = getUserIP();
+// $os = getUserOS();
+// $browser = getUserBrowser();
+// $location = getLocationData($ip);
+// $country = $location['country'];
+// $region  = $location['region'];
+// $city    = $location['city'];
 
-// Gather all info
-$ip = getUserIP();
-$os = getUserOS();
-$browser = getUserBrowser();
-$location = getLocationData($ip);
-$country = $location['country'];
-$region  = $location['region'];
-$city    = $location['city'];
+// $stmt = $pdo->prepare("SELECT COUNT(*) FROM visitors WHERE ip_address = ?");
+// $stmt->execute([$ip]);
+// $count = $stmt->fetchColumn();
 
-// Check if IP exists
-$stmt = $pdo->prepare("SELECT COUNT(*) FROM visitors WHERE ip_address = ?");
-$stmt->execute([$ip]);
-$count = $stmt->fetchColumn();
+// if ($count == 0) {
 
-if ($count == 0) {
-    // Generate unique AES token for this visitor
-    $token = generateAESToken($ip . time());
+//     $token = generateAESToken($ip . time());
 
-    // Insert new visitor
-    $insert = $pdo->prepare("INSERT INTO visitors (ip_address, operating_system, country, `state/region`, city, browser, token) VALUES (?, ?, ?, ?, ?, ?, ?)");
-    $insert->execute([$ip, $os, $country, $region, $city, $browser, $token]);
+//     $insert = $pdo->prepare("INSERT INTO visitors (ip_address, operating_system, country, `state/region`, city, browser, token) VALUES (?, ?, ?, ?, ?, ?, ?)");
+//     $insert->execute([$ip, $os, $country, $region, $city, $browser, $token]);
 
-    // Send email notification
-    require_once('PHPMailer/PHPMailerAutoload.php');
-    $mail = new PHPMailer(true);
+//     require_once('PHPMailer/PHPMailerAutoload.php');
+//     $mail = new PHPMailer(true);
 
-    try {
-        $mail->isSMTP();
-        $mail->Host       = 'mail.techbyfrancis.com';
-        $mail->SMTPAuth   = true;
-        $mail->Username   = 'portfolio@techbyfrancis.com';
-        $mail->Password   = 'TECHbyfrancis101$$';
-        $mail->SMTPSecure = 'ssl';
-        $mail->Port       = 465;
+//     try {
+//         $mail->isSMTP();
+//         $mail->Host       = 'mail.techbyfrancis.com';
+//         $mail->SMTPAuth   = true;
+//         $mail->Username   = 'portfolio@techbyfrancis.com';
+//         $mail->Password   = 'TECHbyfrancis101$$';
+//         $mail->SMTPSecure = 'ssl';
+//         $mail->Port       = 465;
 
-        $mail->setFrom('portfolio@techbyfrancis.com', 'TechByFrancis Notification');
-        $mail->addAddress('francisnwankwo1972@gmail.com');
+//         $mail->setFrom('portfolio@techbyfrancis.com', 'TechByFrancis Notification');
+//         $mail->addAddress('francisnwankwo1972@gmail.com');
 
-        $mail->isHTML(true);
-        $mail->Subject = 'New Unique Visitor Alert';
-        $mail->Body    = "
-            <h3>New Unique Visitor</h3>
-            <p><strong>IP Address:</strong> $ip</p>
-            <p><strong>Operating System:</strong> $os</p>
-            <p><strong>Browser:</strong> $browser</p>
-            <p><strong>Country:</strong> $country</p>
-            <p><strong>Region:</strong> $region</p>
-            <p><strong>City:</strong> $city</p>
-            <p><small>Time: " . date('Y-m-d H:i:s') . "</small></p>
-        ";
+//         $mail->isHTML(true);
+//         $mail->Subject = 'New Unique Visitor Alert';
+//         $mail->Body    = "
+//             <h3>New Unique Visitor</h3>
+//             <p><strong>IP Address:</strong> $ip</p>
+//             <p><strong>Operating System:</strong> $os</p>
+//             <p><strong>Browser:</strong> $browser</p>
+//             <p><strong>Country:</strong> $country</p>
+//             <p><strong>Region:</strong> $region</p>
+//             <p><strong>City:</strong> $city</p>
+//             <p><small>Time: " . date('Y-m-d H:i:s') . "</small></p>
+//         ";
 
-        $mail->send();
-    } catch (Exception $e) {
-        // Handle email error silently
-    }
-}
+//         $mail->send();
+//     } catch (Exception $e) {
+//     }
+// }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
+    <!-- Character Encoding -->
     <meta charset="UTF-8">
+
+    <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME | TechByFrancis</title>
-    <!-- Favicon link -->
+
+    <!-- Primary SEO -->
+    <title>TechByFrancis | Full-Stack Developer, Cybersecurity & IT Project Management</title>
+
+    <meta name="description"
+        content="TechByFrancis delivers secure, scalable, and innovative digital solutions for businesses, organizations, and individuals. Specializing in Full-Stack Development, Cybersecurity, IT Project Management, SEO, and custom software solutions.">
+
+    <meta name="keywords"
+        content="TechByFrancis, Francis Nwankwo, Full Stack Developer, Software Developer, Web Developer, Cybersecurity, Penetration Testing, IT Project Management, Custom Software Development, SEO, Laravel Developer, React Developer, PHP Developer, Node.js Developer">
+
+    <meta name="author" content="Francis Nwankwo">
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="theme-color" content="#2563EB">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://techbyfrancis.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title"
+        content="TechByFrancis | Secure, Scalable & Innovative Digital Solutions">
+    <meta property="og:description"
+        content="Helping businesses build secure, scalable and modern digital solutions through Full-Stack Development, Cybersecurity, IT Project Management and custom software development.">
+    <meta property="og:image" content="https://techbyfrancis.com/IMAGES/og-image.jpg">
+    <meta property="og:url" content="https://techbyfrancis.com/">
+    <meta property="og:site_name" content="TechByFrancis">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title"
+        content="TechByFrancis | Secure Digital Solutions">
+    <meta name="twitter:description"
+        content="Full-Stack Development • Cybersecurity • IT Project Management • Custom Software Solutions">
+    <meta name="twitter:image"
+        content="https://techbyfrancis.com/IMAGES/og-image.jpg">
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="IMAGES/icon.png">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="IMAGES/icon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="BOOTSTRAP/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="CSS/home.css">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/0ed688cb3d.js" crossorigin="anonymous"></script>
+
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </head>
 <style>
     .hero-section {
@@ -607,12 +652,125 @@ if ($count == 0) {
         <div class="container">
             <div class="row g-4 justify-content-center">
 
+                <!-- PROJECT 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card shadow rounded-4 overflow-hidden h-100">
+
+                        <!-- CAROUSEL 3 -->
+                        <div id="carousel3" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
+
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="IMAGES/mms1.png" class="d-block w-100">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="IMAGES/mms2.png" class="d-block w-100">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="IMAGES/mms3.png" class="d-block w-100">
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon bg-dark rounded-circle p-2"></span>
+                            </button>
+
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel3" data-bs-slide="next">
+                                <span class="carousel-control-next-icon bg-dark rounded-circle p-2"></span>
+                            </button>
+
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">MEDICALS MANAGEMENT SYSTEM (MMS)</h5>
+
+                            <p class="text-muted small">
+                                A high-performance, multi-branch operations management ecosystem built for hospitals, clinics, enterprise companies and pharmaceuticals, featuring real-time inventory synchronization, instant stock row-locking, prescription tracking, medical records, medications dispensing and centralized staffs and patients reporting.
+                            </p>
+                            <!-- <p>Tech Stack:
+                                <span class="badge bg-danger fw-bold me-2">HTML5</span>
+                                <span class="badge bg-danger fw-bold me-2">BOOTSTRAP</span>
+                                <span class="badge bg-danger fw-bold me-2">JavaScript</span>
+                                <span class="badge bg-danger fw-bold me-2">PHP</span>
+                                <span class="badge bg-danger fw-bold me-2">LARAVEL</span>
+                                <span class="badge bg-danger fw-bold me-2">MYSQL</span>
+                                <span class="badge bg-danger fw-bold me-2">GIT</span>
+                                <span class="badge bg-danger fw-bold me-2">GITHUB</span>
+                            </p> -->
+
+                            <br>
+                            <a href="https://mms.techbyfrancis.com/" class="learn-more" target="_blank" rel="noopener">
+                                View Live <img src="IMAGES/blue arrow.png" alt="arrow icon" style="height: 20px;" class="ps-2">
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
 
                 <!-- PROJECT 0 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="card shadow rounded-4 overflow-hidden h-100">
 
                         <!-- CAROUSEL 0 -->
+                        <div id="carousel0" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
+
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="IMAGES/Screenshot 2026-07-22 at 8.32.18 AM.png" class="d-block w-100">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="IMAGES/Screenshot 2026-07-22 at 8.33.10 AM.png" class="d-block w-100">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="IMAGES/Screenshot 2026-07-22 at 8.33.41 AM.png" class="d-block w-100">
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel0" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon bg-dark rounded-circle p-2"></span>
+                            </button>
+
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel0" data-bs-slide="next">
+                                <span class="carousel-control-next-icon bg-dark rounded-circle p-2"></span>
+                            </button>
+
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">DIGITAL GATE PASS MANAGEMENT SYSTEM</h5>
+
+                            <p class="text-muted small">
+                                Designed and developed a secure, enterprise-grade Digital Gate Pass Management System for Equal Logistics Limited to modernize and automate its manual, paper-based visitor and vehicle access process.
+
+                                The platform centralizes gate pass requests, approvals, and visitor tracking into a single, streamlined workflow, significantly improving operational efficiency, enhancing security, and reducing administrative overhead. Built with scalability in mind, the system supports multiple company branches from a unified platform while providing role-based access control, secure data management, and complete visibility into visitor and vehicle movements across locations.
+                            </p>
+
+                            <!-- <p>Tech Stack:
+                                <span class="badge bg-danger fw-bold me-2">HTML5</span>
+                                <span class="badge bg-danger fw-bold me-2">BOOTSTRAP</span>
+                                <span class="badge bg-danger fw-bold me-2">JavaScript</span>
+                                <span class="badge bg-danger fw-bold me-2">PHP</span>
+                                <span class="badge bg-danger fw-bold me-2">LARAVEL</span>
+                                <span class="badge bg-danger fw-bold me-2">MYSQL</span>
+                                <span class="badge bg-danger fw-bold me-2">GIT</span>
+                                <span class="badge bg-danger fw-bold me-2">GITHUB</span>
+                            </p> -->
+
+                            <br>
+                            <a href="https://techbyfrancis.com/gate-pass/" class="learn-more" target="_blank" rel="noopener">
+                                View Live <img src="IMAGES/blue arrow.png" alt="arrow icon" style="height: 20px;" class="ps-2">
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- PROJECT 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card shadow rounded-4 overflow-hidden h-100">
+
+                        <!-- CAROUSEL 1 -->
                         <div id="carousel1" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
 
                             <div class="carousel-inner">
@@ -665,97 +823,6 @@ if ($count == 0) {
                 </div>
 
 
-                <!-- PROJECT 1 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card shadow rounded-4 overflow-hidden h-100">
-
-                        <!-- CAROUSEL 1 -->
-                        <div id="carousel1" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
-
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="IMAGES/New Project (3).png" class="d-block w-100" alt="Garesplace App">
-                                </div>
-
-                                <div class="carousel-item">
-                                    <img src="IMAGES/GARES SCREENSHOT.png" class="d-block w-100" alt="Garesplace Dashboard">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon bg-dark rounded-circle p-2"></span>
-                            </button>
-
-                            <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
-                                <span class="carousel-control-next-icon bg-dark rounded-circle p-2"></span>
-                            </button>
-
-                        </div>
-
-                        <div class="card-body">
-                            <h5 class="card-title">GARESPLACE APP</h5>
-
-                            <p class="text-muted small">
-                                GaresPlace is a mobile app designed to simplify hotel dining and delivery services. It connects the
-                                frontend and backend through a dedicated PHP API for seamless interaction. Customers can browse menus,
-                                view product details, and place orders for delivery to rooms, bars, or homes. A favorites feature allows
-                                quick access to preferred items.
-
-                                On the management side, the app includes a secure admin dashboard built with PHP and MySQL. Staff can
-                                track orders, assign riders, and monitor activities with real-time analytics for better decision-making.
-                            </p>
-
-                            <!-- <p>
-                                Tech Stack:
-                                <span class="badge bg-danger fw-bold me-1">PHP</span>
-                                <span class="badge bg-danger fw-bold me-1">LARAVEL</span>
-                                <span class="badge bg-danger fw-bold me-1">MYSQL</span>
-                                <span class="badge bg-danger fw-bold me-1">REST API</span>
-                                <span class="badge bg-danger fw-bold me-1">GIT</span>
-                                <span class="badge bg-danger fw-bold me-1">GITHUB</span>
-                                <span class="badge bg-danger fw-bold me-1">POSTMAN</span>
-                            </p> -->
-
-                            <br>
-
-                            <a href="https://play.google.com/store/apps/details?id=com.kitchen.glares_place"
-                                class="learn-more" target="_blank" rel="noopener">
-                                View & Download App
-                                <img src="IMAGES/blue arrow.png" alt="arrow icon" style="height: 20px;" class="ps-2">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PROJECT 2 -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card shadow rounded-4 overflow-hidden h-100">
-                        <img src="IMAGES/Haut Logistics _ Home - Google Chrome 18_05_2025 09_12_17.png"
-                            alt="HAUT Logistics project preview" class="img-fluid rounded">
-                        <div class="p-3">
-                            <h5 class="pt-3">HAUT LOGISTICS</h5>
-                            <p class="text-muted small">
-                                My logistics shipping platform makes order tracking simple and efficient.
-                                Administrators can securely upload and manage shipments with auto-generated tracking numbers.
-                                Customers receive real-time automatic email notifications with detailed tracking information.
-                                Experience seamless logistics with complete visibility from dispatch to delivery.
-                            </p>
-                            <!-- <p>Tech Stack:
-                                <span class="badge bg-danger fw-bold me-2">HTML5</span>
-                                <span class="badge bg-danger fw-bold me-2">CSS3</span>
-                                <span class="badge bg-danger fw-bold me-2">BOOTSTRAP</span>
-                                <span class="badge bg-danger fw-bold me-2">JavaScript</span>
-                                <span class="badge bg-danger fw-bold me-2">PHP</span>
-                                <span class="badge bg-danger fw-bold me-2">LARAVEL</span>
-                                <span class="badge bg-danger fw-bold me-2">MYSQL</span>
-                                <span class="badge bg-danger fw-bold me-2">GIT</span>
-                                <span class="badge bg-danger fw-bold me-2">GITHUB</span>
-                            </p> -->
-                            <a href="https://www.hautlogistics.com/" class="learn-more" target="_blank" rel="noopener">
-                                View Live <img src="IMAGES/blue arrow.png" alt="arrow icon" style="height: 20px;" class="ps-2">
-                            </a>
-                        </div>
-                    </div>
-                </div>
             </div>
 
         </div>
